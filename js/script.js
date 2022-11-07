@@ -19,35 +19,37 @@ console.log(age);
 
 //prezzo per il biglietto è 0.21 € al km
 
-    ticketCost= km * priceForKm;
+    pricePassenger= (km * priceForKm ).toFixed(2);
 
-    console.log(ticketCost);
+    console.log(pricePassenger);
 
     
 
 // se è minorenne verrà applicato lo sconto del 20%
-let discountYoung=  ticketCost * 20 / 100;
+let discountYoung = pricePassenger * 20 / 100;
 
 
 //se è anziano verrà applicato lo sconto del 40%
-let discounOld =  ticketCost * 40 / 100;
+let discounOld =  pricePassenger * 40 / 100;
 
 
 
 // Calcolare il prezzo del biglietto in base ai dati 
 
 if (age < 18){
-    let priceYoung = (ticketCost - discountYoung).toFixed(2);
+    let priceYoung = (pricePassenger - discountYoung).toFixed(2);
     
-    document.getElementById("title").innerHTML = `Il prezzo del tuo biglietto è di ${priceYoung}€ euro`;
+    document.getElementById("title").innerHTML = `Con l'acquisto di questo biglietto, Lei ha ${age} anni, kilometri da percorrere ${km}km, il prezzo scontato da noi e 20% per lei e: ${priceYoung}.€  euro`;
 
 }else if( age > 65 ){
-    let priceOld = (ticketCost - discounOld).toFixed(2);
+    let priceOld = (pricePassenger - discountOld).toFixed(2);
 
-    document.getElementById("title").innerHTML = `Il prezzo del tuo biglietto è di ${priceOld}€ euro`;
+    document.getElementById("title").innerHTML = `Con l'acquisto di questo biglietto, Lei ha ${age} anni, kilometri da percorrere ${km}km, il prezzo scontato da noi e 20% per lei e: ${priceOld}. € euro`;
+
 }else{
-    ticketCost;
+    pricePassenger;
 
-    document.getElementById("title").innerHTML = `Il prezzo del tuo biglietto è di ${ticketCost}€ euro`;
+    document.getElementById("title").innerHTML = `Con l'acquisto di questo biglietto, Lei ha ${age} anni, kilometri da percorrere ${km}km, il prezzo scontato da noi e 20% per lei e: ${pricePassenger}. € euro`;
+
 }
 
