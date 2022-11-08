@@ -1,7 +1,7 @@
 // Il programma deve Calcolare il prezzo del biglietto per il treno
 
 // elenco variabili
-let age, km, ticketCost;
+let age, km, pricePassenger;
 
 let priceForKm = 0.21;
 
@@ -30,7 +30,7 @@ let discountYoung = pricePassenger * 20 / 100;
 
 
 //se è anziano verrà applicato lo sconto del 40%
-let discounOld =  pricePassenger * 40 / 100;
+let discountOld =  pricePassenger * 40 / 100;
 
 
 
@@ -52,4 +52,3 @@ if (age < 18){
     document.getElementById("title").innerHTML = `Con l'acquisto di questo biglietto, Lei ha ${age} anni, kilometri da percorrere ${km}km, il prezzo scontato da noi e 20% per lei e: ${pricePassenger}. € euro`;
 
 }
-
