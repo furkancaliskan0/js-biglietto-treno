@@ -44,11 +44,11 @@ if (age < 18){
 }else if( age > 65 ){
     let priceOld = (pricePassenger - discountOld).toFixed(2);
 
-    document.getElementById("title").innerHTML = `Con l'acquisto di questo biglietto, Lei ha ${age} anni, kilometri da percorrere ${km}km, il prezzo scontato da noi e 20% per lei e: ${priceOld}. € euro`;
+    document.getElementById("title").innerHTML = `Con l'acquisto di questo biglietto, Lei ha ${age} anni, kilometri da percorrere ${km}km, il prezzo scontato da noi e 40% per lei e: ${priceOld}. € euro`;
 
 }else{
     pricePassenger;
 
-    document.getElementById("title").innerHTML = `Con l'acquisto di questo biglietto, Lei ha ${age} anni, kilometri da percorrere ${km}km, il prezzo scontato da noi e 20% per lei e: ${pricePassenger}. € euro`;
+    document.getElementById("title").innerHTML = `Con l'acquisto di questo biglietto, Lei ha ${age} anni, kilometri da percorrere ${km}km, il prezzo per lei e: ${pricePassenger}. € euro`;
 
 }
